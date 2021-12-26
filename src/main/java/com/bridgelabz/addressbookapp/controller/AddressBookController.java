@@ -49,10 +49,10 @@ public class AddressBookController {
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
 	}
 	
-	@PutMapping("/put")
-	public ResponseEntity<ResponseDTO> updatingContact(@RequestBody ContactDTO contact){
+	@PutMapping("/put/{id}")
+	public ResponseEntity<ResponseDTO> updatingContact(@PathVariable("id") int id,@RequestBody ContactDTO contact){
 		AddressBookData contactData = null;
-		contactData = addressBookServices.updateEmployeeData(contact);
+		contactData = addressBookServices.updateEmployeeData(id,contact);
 		ResponseDTO responseDTO = new ResponseDTO("update data is Successful", contactData);
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
 	}

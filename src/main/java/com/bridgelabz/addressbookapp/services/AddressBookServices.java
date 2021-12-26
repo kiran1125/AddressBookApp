@@ -11,37 +11,36 @@ import org.springframework.stereotype.Service;
 @Service
 public class AddressBookServices implements IAddressBookServices {
 
+    List<AddressBookData> contactList = new ArrayList<>();
+
     @Override
     public List<AddressBookData> getContactData() {
-        List<AddressBookData> contactList = new ArrayList<>();
-        contactList.add( new AddressBookData(1, new ContactDTO("kiran", "Hindupur", "AP", 515201, 966606929)));
         return contactList;
     }
 
     @Override
     public AddressBookData getContactDataById(int id) {
-        AddressBookData contactData = null;
-        contactData = new AddressBookData(id, new ContactDTO("karthik", "Hindupur", "AP", 515201, 966606929));
-        return contactData;
+        return contactList.get(id);
     }
 
     @Override
     public AddressBookData addEmployeeData(ContactDTO contact) {
         AddressBookData contactData = null;
-        contactData = new AddressBookData(1, contact);
+        contactData = new AddressBookData(contactList.size() + 1, contact);
+        contactList.add(contactData);
         return contactData;
     }
 
     @Override
-    public AddressBookData updateEmployeeData(ContactDTO contact) {
+    public AddressBookData updateEmployeeData(int id,ContactDTO contact) {
         AddressBookData contactData = null;
-        contactData = new AddressBookData(1, contact);
+        contactData = new AddressBookData(id, contact);
         return contactData;
     }
 
     @Override
     public void deleteEmployeeData(int id) {
-        
+        contactList.remove(id);
     }
     
 }
