@@ -22,6 +22,56 @@ public class ContactDTO {
         return "ContactDTO [city=" + city + ", name=" + name + ", phoneNumber=" + phoneNumber + ", pincode=" + pincode
                 + ", state=" + state + "]";
     }
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getCity() {
+        return city;
+    }
+
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+
+    public String getState() {
+        return state;
+    }
+
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+
+    public long getPincode() {
+        return pincode;
+    }
+
+
+    public void setPincode(long pincode) {
+        this.pincode = pincode;
+    }
+
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
     
 
 }
