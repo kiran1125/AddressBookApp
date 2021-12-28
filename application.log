@@ -1,0 +1,45 @@
+2021-12-28 07:24:44.935  WARN 35972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:26:32.918  WARN 35972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:26:47.215  WARN 35972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:26:49.993  WARN 35972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:27:10.496  WARN 18788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:29:36.806  WARN 18788 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': Could not bind properties to 'JpaProperties' : prefix=spring.jpa, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.jpa.open-in-view' to java.lang.Boolean
+2021-12-28 07:29:36.921 ERROR 18788 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jpa.open-in-view' to java.lang.Boolean:
+
+    Property: spring.jpa.open-in-view
+    Value: disable
+    Origin: class path resource [application.properties] - 15:27
+    Reason: failed to convert java.lang.String to java.lang.Boolean (caused by java.lang.IllegalArgumentException: Invalid boolean value 'disable')
+
+Action:
+
+Update your application's configuration
+
+2021-12-28 07:30:31.821  WARN 18788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:42:43.503  WARN 18788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:43:04.963  WARN 35008 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 07:47:51.262  WARN 25744 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:01:13.520  WARN 30780 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:09:36.302  WARN 26548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:12:28.465  WARN 26548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:13:04.050  WARN 26548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:13:44.445  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 1.8.0_121 on Kiran with PID 26548 (E:\Spring\addressbookapp\target\classes started by Ki ran in E:\Spring\addressbookapp)
+2021-12-28 09:13:44.453 DEBUG 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.2, Spring v5.3.14
+2021-12-28 09:13:44.462  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : No active profile set, falling back to default profiles: default
+2021-12-28 09:13:45.297  WARN 26548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:13:45.613  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 1.812 seconds (JVM running for 257.579)
+2021-12-28 09:13:45.709  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book App Started in null Environment
+2021-12-28 09:13:58.825  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 1.8.0_121 on Kiran with PID 26548 (E:\Spring\addressbookapp\target\classes started by Ki ran in E:\Spring\addressbookapp)
+2021-12-28 09:13:58.827 DEBUG 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.6.2, Spring v5.3.14
+2021-12-28 09:13:58.828  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : No active profile set, falling back to default profiles: default
+2021-12-28 09:13:59.725  WARN 26548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-28 09:14:00.236  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 1.563 seconds (JVM running for 272.203)
+2021-12-28 09:14:00.302  INFO 26548 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book App Started in COMMON Environment
