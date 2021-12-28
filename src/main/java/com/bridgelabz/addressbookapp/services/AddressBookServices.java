@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
+import com.bridgelabz.addressbookapp.exceptions.AddressBookException;
 import com.bridgelabz.addressbookapp.model.AddressBookData;
 
 import org.springframework.stereotype.Service;
@@ -20,7 +21,8 @@ public class AddressBookServices implements IAddressBookServices {
 
     @Override
     public AddressBookData getContactDataById(int id) {
-        return contactList.get(id -1);
+ 
+        return contactList.stream().filter(e -> e.getId() == id).findFirst().orElseThrow(()-> new AddressBookException("Contact not Found"));
     }
 
     @Override
