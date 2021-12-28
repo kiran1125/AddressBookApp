@@ -20,7 +20,7 @@ public class AddressBookServices implements IAddressBookServices {
 
     @Override
     public AddressBookData getContactDataById(int id) {
-        return contactList.get(id);
+        return contactList.get(id -1);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class AddressBookServices implements IAddressBookServices {
 
     @Override
     public void deleteContactData(int id) {
-        contactList.remove(id);
+        contactList.remove(id - 1);
     }
     
 }

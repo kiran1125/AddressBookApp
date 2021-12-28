@@ -1,77 +1,25 @@
 package com.bridgelabz.addressbookapp.dto;
 
-public class ContactDTO {
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import lombok.Data;
+
+
+public @Data class ContactDTO {
+    @Pattern(regexp = "^[A-Z]{1}[a-z]{3,}" , message = "Contact name is Invalid")
     private String name;
+    @NotEmpty(message = "city should not be Empty" )
     private String city;
+    @NotEmpty(message = "state should not be Empty" )
     private String state;
+    @NotNull
     private long pincode;
+    @NotNull
     private long phoneNumber;
 
 
-    public ContactDTO(String name, String city, String state, long pincode, long phoneNumber) {
-        this.name = name;
-        this.city = city;
-        this.state = state;
-        this.pincode = pincode;
-        this.phoneNumber = phoneNumber;
-    }
-
-
-    @Override
-    public String toString() {
-        return "ContactDTO [city=" + city + ", name=" + name + ", phoneNumber=" + phoneNumber + ", pincode=" + pincode
-                + ", state=" + state + "]";
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public String getCity() {
-        return city;
-    }
-
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-
-    public String getState() {
-        return state;
-    }
-
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-
-    public long getPincode() {
-        return pincode;
-    }
-
-
-    public void setPincode(long pincode) {
-        this.pincode = pincode;
-    }
-
-
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
     
-
 }
