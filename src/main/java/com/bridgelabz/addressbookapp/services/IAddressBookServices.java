@@ -11,10 +11,10 @@ public interface IAddressBookServices {
 
     AddressBookData getContactDataById(int id);
 
-    AddressBookData addEmployeeData(ContactDTO contact);
+    AddressBookData addContactData(ContactDTO contact);
 
-    AddressBookData updateEmployeeData(int id,ContactDTO contact);
+    AddressBookData updateContactData(int id,ContactDTO contact);
 
-    void deleteEmployeeData(int id);
+    void deleteContactData(int id);
     
 }

@@ -44,7 +44,7 @@ public class AddressBookController {
 	@PostMapping("/post")
 	public ResponseEntity<ResponseDTO> addingContact(@RequestBody ContactDTO contact){
 		AddressBookData contactData = null;
-		contactData = addressBookServices.addEmployeeData(contact);
+		contactData = addressBookServices.addContactData(contact);
 		ResponseDTO responseDTO = new ResponseDTO("post data is Successful", contactData);
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
 	}
@@ -52,14 +52,14 @@ public class AddressBookController {
 	@PutMapping("/put/{id}")
 	public ResponseEntity<ResponseDTO> updatingContact(@PathVariable("id") int id,@RequestBody ContactDTO contact){
 		AddressBookData contactData = null;
-		contactData = addressBookServices.updateEmployeeData(id,contact);
+		contactData = addressBookServices.updateContactData(id,contact);
 		ResponseDTO responseDTO = new ResponseDTO("update data is Successful", contactData);
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<ResponseDTO> deleteContactById(@PathVariable ("id") int id){
-		addressBookServices.deleteEmployeeData(id);
+		addressBookServices.deleteContactData(id);
 		ResponseDTO responseDTO = new ResponseDTO("delete data is Successful of id :", id);
 		return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
 	}

@@ -24,7 +24,7 @@ public class AddressBookServices implements IAddressBookServices {
     }
 
     @Override
-    public AddressBookData addEmployeeData(ContactDTO contact) {
+    public AddressBookData addContactData(ContactDTO contact) {
         AddressBookData contactData = null;
         contactData = new AddressBookData(contactList.size() + 1, contact);
         contactList.add(contactData);
@@ -32,14 +32,14 @@ public class AddressBookServices implements IAddressBookServices {
     }
 
     @Override
-    public AddressBookData updateEmployeeData(int id,ContactDTO contact) {
-        AddressBookData contactData = null;
-        contactData = new AddressBookData(id, contact);
+    public AddressBookData updateContactData(int id,ContactDTO contact) {
+        AddressBookData contactData = new AddressBookData(id,contact);
+        contactList.set((id - 1), contactData);
         return contactData;
     }
 
     @Override
-    public void deleteEmployeeData(int id) {
+    public void deleteContactData(int id) {
         contactList.remove(id);
     }
     
